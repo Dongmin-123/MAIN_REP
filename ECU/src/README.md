@@ -7,3 +7,6 @@
 3.window->preference->run/debug->launching-> always launch~~~ 체크  
 
 ### Setting()
+
+### 계층구조 설명
+1.BSP: MCU 가 실행되는데 가장 필수적인 요소들의 설정을 담당한다. cpu클럭, 

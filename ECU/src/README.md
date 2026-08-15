@@ -21,7 +21,7 @@
 7.저장하면 코드 자동생성 및 lib 에 유용한 file 들 자동 생성  
 8.driver폴더 밑에 있는 파일들은 직접 사용, core 폴더에 있는 파일들은 간접 사용  
 9.core 폴더 우클릭->resource configurations->exclude~ 클릭 후 모두 적용  
-10.project->properties->c/c++ build->setting->MCU/Gcc compiler->include paths->include path 추가(drivers/cmsis/device/st/stm32xxxx/include, drivers/cmsis/include,drivers/Stm32xxx_HAL_Driver/Inc 를 include path)  
+10.project->properties->c/c++ build->setting->MCU/Gcc compiler->include paths->include path 추가(drivers/cmsis/device/st/stm32xxxx/include, drivers/cmsis/include,drivers/Stm32xxx_HAL_Driver/Inc)  
 11.project->properties->c/c++build -> settings -> mcu gcc compiler -> preprocessor->제품명 추가  
 (drivers/cmsis/device/st/stm32xxxx/include/stm32xxxxx.h 참조)  
 12.drivers/core/src/stm32xxx_hal_msp.c,it.c,system_stm32fxxx.c  | inc/stm32xxxx_hal_conf.h,it.h 이동(bsp로)  

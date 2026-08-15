@@ -12,13 +12,23 @@
 4.project->properties->c/c++->setting->tool chain->MCU GCC Linker->General->Linker script 재지정  
 
 ### Setting(CUBEMX)  
-1.저장->lib 폴더 지정(꼭 폴더 하나 더 생성해서 그 안에 저장하기)
+1.저장->lib 폴더 지정(꼭 폴더 하나 더 생성해서 그 안에 저장하기)  
 2.system core->sys->debug->serial wire  
 3.system core->RCC->HSE crystal,LSE crystal  
-4.clock configuration->clock 설정
+4.clock configuration->clock 설정  
 5.project manager ->project->toolchain/ide->stm32cubeide 로 지정  
 6.project manager ->code manager->Generate peripheral ~~ 설정 해제  
-7.저장하면 코드 자동생성.  
+7.저장하면 코드 자동생성 및 lib 에 유용한 file 들 자동 생성  
+8.driver폴더 밑에 있는 파일들은 직접 사용, core 폴더에 있는 파일들은 간접 사용  
+9.core 폴더 우클릭->resource configurations->exclude~ 클릭 후 모두 적용  
+10.project->properties->c/c++ build->setting->MCU/Gcc compiler->include paths->include path 추가(drivers/cmsis/device/st/stm32xxxx/include, drivers/cmsis/include,drivers/Stm32xxx_HAL_Driver/Inc 를 include path)  
+11.project->properties->c/c++build -> settings -> mcu gcc compiler -> preprocessor->제품명 추가  
+(drivers/cmsis/device/st/stm32xxxx/include/stm32xxxxx.h 참조)  
+12.drivers/core/src/stm32xxx_hal_msp.c,it.c,system_stm32fxxx.c  | inc/stm32xxxx_hal_conf.h,it.h 이동(bsp로)  
+*만약 설계가 수정되어 사용하는 io/핀 등이 달라졌다면 hal_conf.h를 다시 bsp 로 이동시켜줄것.  
+13.자동생성된 main.c->HAL_init,Systemclock config 계층폴더 bspinit 함수로 이동(사실상 init 시켜주는 모든 코드 이동)  
+*main.c 의 while 문 밑에 있는 init 함수들의 본체도 옮겨줄 것  
+*만약 사용하는 기능이 다수라면, main.c 밑에 있는 코드를 적당히 bspinit 으로 옮길것
 
 
 

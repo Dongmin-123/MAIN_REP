@@ -5,6 +5,6 @@
 #include "hw.h"
 
 void apInit(void);
-void apmain(void);
+void apMain(void);
 
 #endif

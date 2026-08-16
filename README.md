@@ -1,5 +1,5 @@
 
-## MP_works ecu 제작 (stm32g474ret6 사용).
+## stm32 usb cdc example
 ### Setting(CUBEIDE)
 1.window->preference->general->workspace->utf-8변경  
 2.window->preference->c/c++->code style->formatter->new&GNU, 들여쓰기 2칸, space, braces->Next line 설정(initializer list 제외)  
@@ -38,5 +38,6 @@
 3.hw : bsp 에서 계층화되고, 추상화된 HAL 등을 활용하여 센서 및 gpio 의 가동을 담당한다. mcu 가 변경되더라도 이 파일만 변경하면 되게 만든다(센서 등 외부장치 추상화).  
 4.ap : hw 에서 추상화된 센서 사용 코드를 바탕으로 제어루프에 적용시키고, 센서를 읽어오는 작업을 담당한다.  
 
-### 사용되는 센서 및 엑추에이터  
-1.
+### usb cdc setting
+1.cubemx 에서 usb/usb_device설정 후 code generate.  
+2.include path(middleware->cdc->inc,core>inc/usb_device->app,target)

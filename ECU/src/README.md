@@ -28,8 +28,8 @@
 *만약 설계가 수정되어 사용하는 io/핀 등이 달라졌다면 hal_conf.h를 다시 bsp 로 이동시켜줄것.  
 13.자동생성된 main.c->HAL_init,Systemclock config 계층폴더 bspinit 함수로 이동(사실상 init 시켜주는 모든 코드 이동)  
 *main.c 의 while 문 밑에 있는 init 함수들의 본체도 옮겨줄 것  
-*만약 사용하는 기능이 다수라면, main.c 밑에 있는 코드를 적당히 bspinit 으로 옮길것
-
+*만약 사용하는 기능이 다수라면, main.c 밑에 있는 코드를 적당히 bspinit 으로 옮길것  
+14.bsp.h 에 stm32xxxx_hal.h include 시킬것.
 
 
 ### 계층구조 설명

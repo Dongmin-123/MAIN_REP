@@ -40,4 +40,5 @@
 
 ### usb cdc setting
 1.cubemx 에서 usb/usb_device설정 후 code generate.  
-2.include path(middleware->cdc->inc,core>inc/usb_device->app,target)
+2.include path(middleware->cdc->inc,core>inc/usb_device->app,target)  
+3.
